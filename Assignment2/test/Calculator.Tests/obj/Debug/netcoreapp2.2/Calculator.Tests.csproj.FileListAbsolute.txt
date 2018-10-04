@@ -1,0 +1,17 @@
+C:\Github\EWU-CSCD371-2018-Fall\Assignment2\test\Calculator.Tests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Github\EWU-CSCD371-2018-Fall\Assignment2\test\Calculator.Tests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Github\EWU-CSCD371-2018-Fall\Assignment2\test\Calculator.Tests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Github\EWU-CSCD371-2018-Fall\Assignment2\test\Calculator.Tests\bin\Debug\netcoreapp2.2\Calculator.Tests.deps.json
+C:\Github\EWU-CSCD371-2018-Fall\Assignment2\test\Calculator.Tests\bin\Debug\netcoreapp2.2\Calculator.Tests.runtimeconfig.json
+C:\Github\EWU-CSCD371-2018-Fall\Assignment2\test\Calculator.Tests\bin\Debug\netcoreapp2.2\Calculator.Tests.runtimeconfig.dev.json
+C:\Github\EWU-CSCD371-2018-Fall\Assignment2\test\Calculator.Tests\bin\Debug\netcoreapp2.2\Calculator.Tests.dll
+C:\Github\EWU-CSCD371-2018-Fall\Assignment2\test\Calculator.Tests\bin\Debug\netcoreapp2.2\Calculator.Tests.pdb
+C:\Github\EWU-CSCD371-2018-Fall\Assignment2\test\Calculator.Tests\bin\Debug\netcoreapp2.2\Calculator.dll
+C:\Github\EWU-CSCD371-2018-Fall\Assignment2\test\Calculator.Tests\bin\Debug\netcoreapp2.2\Calculator.pdb
+C:\Github\EWU-CSCD371-2018-Fall\Assignment2\test\Calculator.Tests\obj\Debug\netcoreapp2.2\Calculator.Tests.csprojAssemblyReference.cache
+C:\Github\EWU-CSCD371-2018-Fall\Assignment2\test\Calculator.Tests\obj\Debug\netcoreapp2.2\Calculator.Tests.csproj.CoreCompileInputs.cache
+C:\Github\EWU-CSCD371-2018-Fall\Assignment2\test\Calculator.Tests\obj\Debug\netcoreapp2.2\Calculator.Tests.AssemblyInfoInputs.cache
+C:\Github\EWU-CSCD371-2018-Fall\Assignment2\test\Calculator.Tests\obj\Debug\netcoreapp2.2\Calculator.Tests.AssemblyInfo.cs
+C:\Github\EWU-CSCD371-2018-Fall\Assignment2\test\Calculator.Tests\obj\Debug\netcoreapp2.2\Calculator.Tests.csproj.CopyComplete
+C:\Github\EWU-CSCD371-2018-Fall\Assignment2\test\Calculator.Tests\obj\Debug\netcoreapp2.2\Calculator.Tests.dll
+C:\Github\EWU-CSCD371-2018-Fall\Assignment2\test\Calculator.Tests\obj\Debug\netcoreapp2.2\Calculator.Tests.pdb
