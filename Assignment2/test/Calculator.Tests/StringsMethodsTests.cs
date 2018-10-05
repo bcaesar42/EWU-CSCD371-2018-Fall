@@ -22,5 +22,13 @@ namespace Strings.Tests
 
             Assert.AreEqual(input.ToLower(), expected);
         }
+
+        [TestMethod]
+        public void Test_Contains()
+        {
+            string input = "BRYAN CAESAR";
+
+            Assert.IsTrue(input.Contains('Y'));
+        }
     }
 }
