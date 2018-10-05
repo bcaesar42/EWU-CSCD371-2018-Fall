@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "c9ab0eeb9f8a08d1496cc2f36b6d9b2926228585"
+    "signature": "8495dc581637d6849845df1a2127e8d739b1de68"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,12 +9,21 @@
       "Calculator.Tests/1.0.0": {
         "dependencies": {
           "Calculator": "1.0.0",
+          "IntelliTect.TestTools.Console": "0.5.1-beta-180924-1",
           "MSTest.TestAdapter": "1.3.2",
           "MSTest.TestFramework": "1.3.2",
           "Microsoft.NET.Test.Sdk": "15.8.0"
         },
         "runtime": {
           "Calculator.Tests.dll": {}
+        }
+      },
+      "IntelliTect.TestTools.Console/0.5.1-beta-180924-1": {
+        "runtime": {
+          "lib/netcoreapp2.0/IntelliTect.TestTools.Console.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
         }
       },
       "Microsoft.CodeCoverage/15.8.0": {
@@ -1026,6 +1035,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "IntelliTect.TestTools.Console/0.5.1-beta-180924-1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mnKRE9RtD3fdhH672K3YCT3AsERT8KPafsxCmt39IhVoBkPpKPQrE0M6AN4GIJNoT5W+LuuD4d7uJHwVoi5/HQ==",
+      "path": "intellitect.testtools.console/0.5.1-beta-180924-1",
+      "hashPath": "intellitect.testtools.console.0.5.1-beta-180924-1.nupkg.sha512"
     },
     "Microsoft.CodeCoverage/15.8.0": {
       "type": "package",

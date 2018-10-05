@@ -21,22 +21,22 @@ namespace Calculator
                 if (input.Contains('/'))
                 {
                     operands = GetOperands(input, '/');
-                    Console.WriteLine(operands[0] / operands[1]);
+                    Console.WriteLine("= " + (operands[0] / operands[1]));
                 }
                 else if (input.Contains('*'))
                 {
                     operands = GetOperands(input, '*');
-                    Console.WriteLine(operands[0] * operands[1]);
+                    Console.WriteLine("= " + (operands[0] * operands[1]));
                 }
                 else if (input.Contains('+'))
                 {
                     operands = GetOperands(input, '+');
-                    Console.WriteLine(operands[0] + operands[1]);
+                    Console.WriteLine("= " + (operands[0] + operands[1]));
                 }
                 else if (input.Substring(1).Contains('-'))
                 {
                     operands = GetOperands(input, '-');
-                    Console.WriteLine(operands[0] - operands[1]);
+                    Console.WriteLine("= " + (operands[0] - operands[1]));
                 }
                 else
                 {
@@ -49,7 +49,7 @@ namespace Calculator
             }
 
             Console.Write("Press any key to exit.");
-            Console.ReadKey();
+            //Console.ReadKey(true);
         }
 
         private static int[] GetOperands(string expression, char equationOperator)

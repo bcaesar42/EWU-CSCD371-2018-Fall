@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="IntelliTect.TestTools.Console" Version="0.5.1-beta-180924-1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.3.2" />
     <PackageReference Include="MSTest.TestFramework" Version="1.3.2" />
@@ -14,6 +15,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Calculator\Calculator.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="IntelliTect.TestTools.Console">
+      <HintPath>..\..\..\..\..\Users\Bryan Caesar\.nuget\packages\intellitect.testtools.console\0.5.1-beta-180924-1\lib\netcoreapp2.0\IntelliTect.TestTools.Console.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
