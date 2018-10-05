@@ -21,6 +21,10 @@ namespace Calculator
                 if (input.Contains('/'))
                 {
                     operands = GetOperands(input, '/');
+                    if (operands[1] == 0)
+                    {
+                        throw new ArgumentException("Cannot divide by zero.");
+                    }
                     Console.WriteLine("= " + (operands[0] / operands[1]));
                 }
                 else if (input.Contains('*'))
