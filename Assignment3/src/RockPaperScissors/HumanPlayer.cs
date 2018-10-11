@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace RockPaperScissors
 {
@@ -6,9 +7,16 @@ namespace RockPaperScissors
     {
         public string MakeMove()
         {
-            Console.Write("Please enter \"rock\", \"paper\", or \"scissors\": ");
+            List<string> validMoves = new List<string>(){"rock", "paper", "scissors"};
+            string move;
 
-            return "test";
+            do
+            {
+                Console.Write("Please enter \"rock\", \"paper\", or \"scissors\": ");
+                move = Console.ReadLine().ToLower();
+            } while (!validMoves.Contains(move));
+
+            return move;
         }
     }
 }
