@@ -13,23 +13,11 @@ namespace RockPaperScissors
             this.playerType = playerType;
         }
 
-        public int GetMove()
+        public string GetMove()
         {
-            string moveString = this.playerType.MakeMove();
-            System.Console.WriteLine(this.name + " played: " + moveString);
-            
-            if (moveString.Equals("rock"))
-            {
-                return 3;
-            }
-            else if (moveString.Equals("scissors"))
-            {
-                return 2;
-            }
-            else //paper
-            {
-                return 1;
-            }
+            string move = this.playerType.MakeMove();
+            System.Console.WriteLine(this.name + " played: " + move);
+            return move;
         }
 
         public void SubtractLife(int lifeLost)

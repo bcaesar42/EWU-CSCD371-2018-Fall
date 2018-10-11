@@ -19,6 +19,7 @@ namespace RockPaperScissors
                 while (player1.GetLife() > 0 && player2.GetLife() > 0)
                 {
                     roundResult = PlayRound(player1, player2);
+                    
                 }
 
                 Console.Write("Do you want to play another game?(y/n): ");
@@ -31,13 +32,45 @@ namespace RockPaperScissors
 
         private static (Player loser, int lifeLost) PlayRound(Player player1, Player player2)
         {
-            int player1Move = player1.GetMove();
-            int player2Move = player2.GetMove();
-            int movesComparison = (player1Move - player2Move) % 3;
+            string player1Move = player1.GetMove();
+            string player2Move = player2.GetMove();
 
-            if (movesComparison == 1)
+            if (player1Move.Equals(player2Move))
             {
-                return(player2, )
+                return (null, 0);
+            }
+            else if (player1Move.Equals("rock"))
+            {
+                if (player2Move.Equals("scissors"))
+                {
+                    return (player2, 20);
+                }
+                else //player2 had "paper"
+                {
+                    return (player1, 10);
+                }
+            }
+            else if (player2Move.Equals("scissors"))
+            {
+                if (player2Move.Equals("paper"))
+                {
+                    return (player2, 15);
+                }
+                else //player2 had "rock"
+                {
+                    return (player1, 20);
+                }
+            }
+            else //player1 had "paper"
+            {
+                if (player2Move.Equals("rock"))
+                {
+                    return (player2, 10);
+                }
+                else //player2 had "scissors"
+                {
+                    return (player1, 15);
+                }
             }
         }
     }
