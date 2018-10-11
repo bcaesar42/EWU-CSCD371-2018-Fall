@@ -2,6 +2,6 @@ namespace RockPaperScissors
 {
     public interface MoveBehavior
     {
-        string makeMove();
+        string MakeMove();
     }
 }
