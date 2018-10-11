@@ -19,7 +19,7 @@ namespace RockPaperScissors
                 while (player1.GetLife() > 0 && player2.GetLife() > 0)
                 {
                     roundResult = PlayRound(player1, player2);
-                    
+                    ProcessResult(roundResult);
                 }
 
                 Console.Write("Do you want to play another game?(y/n): ");
@@ -72,6 +72,13 @@ namespace RockPaperScissors
                     return (player1, 15);
                 }
             }
+        }
+
+        public static void ProcessResult((Player loser, int lifeLost) roundResult)
+        {
+            Console.WriteLine(roundResult.loser.GetName() + " lost the round, and lost "
+                             + roundResult.lifeLost + " life.");
+            roundResult.loser.SubtractLife(roundResult.lifeLost);
         }
     }
 }

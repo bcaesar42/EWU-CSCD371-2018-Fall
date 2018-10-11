@@ -34,5 +34,10 @@ namespace RockPaperScissors
         {
             return this.life;
         }
+
+        public string GetName()
+        {
+            return this.name;
+        }
     }
 }
