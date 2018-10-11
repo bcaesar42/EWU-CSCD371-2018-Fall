@@ -17,8 +17,7 @@ namespace RockPaperScissors
 
                 while (player1.GetLife() > 0 && player2.GetLife() > 0)
                 {
-                    //Play a game (100 life)
-                        ///Play a round
+                    PlayRound(player1, player2);
                 }
 
                 Console.Write("Do you want to play another game?(y/n): ");
