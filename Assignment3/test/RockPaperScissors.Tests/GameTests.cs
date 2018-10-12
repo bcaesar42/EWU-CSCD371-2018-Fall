@@ -12,5 +12,13 @@ namespace RockPaperScissors.Tests
             IntelliTect.TestTools.Console.ConsoleAssert.Expect(expected, () =>
                     Game.ProcessResult(new Player("Player1", new ComputerPlayer()), 20));
         }
+
+        [TestMethod]
+        public void PlayRound2Humans()
+        {
+            string expected = "Player1 lost the round, and lost 20 life.";
+            IntelliTect.TestTools.Console.ConsoleAssert.Expect(expected, () =>
+                    Game.ProcessResult(new Player("Player1", new ComputerPlayer()), 20));
+        }
     }
 }
