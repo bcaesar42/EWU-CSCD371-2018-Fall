@@ -15,9 +15,7 @@ namespace RockPaperScissors
 
         public string GetMove()
         {
-            string move = this.playerType.MakeMove();
-            System.Console.WriteLine(this.name + " played: " + move);
-            return move;
+            return this.playerType.MakeMove();
         }
 
         public void SubtractLife(int lifeLost)

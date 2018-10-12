@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace RockPaperScissors.Tests
 {
     [TestClass]
-    public class GameMethodsTests
+    public class ComputerPlayerTests
     {
         [TestMethod]
         public void TestMethod1()

@@ -33,10 +33,12 @@ namespace RockPaperScissors
             } while (playAgain);
         }
 
-        private static (Player loser, int lifeLost) PlayRound(Player player1, Player player2)
+        public static (Player loser, int lifeLost) PlayRound(Player player1, Player player2)
         {
             string player1Move = player1.GetMove();
             string player2Move = player2.GetMove();
+            Console.WriteLine(player1?.GetName() + " played: " + player1Move);
+            Console.WriteLine(player2?.GetName() + " played: " + player2Move);
 
             if (player1Move.Equals(player2Move))
             {
