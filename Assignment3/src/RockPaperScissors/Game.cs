@@ -13,13 +13,15 @@ namespace RockPaperScissors
             do
             {
                 player1 = new Player("You", new HumanPlayer());
-                player2 = new Player("The computer player", new ComputerPlayer());
+                player2 = new Player("The computer", new ComputerPlayer());
                 (Player loser, int lifeLost) roundResult;
 
                 while (player1.GetLife() > 0 && player2.GetLife() > 0)
                 {
                     roundResult = PlayRound(player1, player2);
-                    ProcessResult(roundResult);
+                    ProcessResult(roundResult.loser, roundResult.lifeLost);
+                    Console.WriteLine($"Current life for \"{player1.GetName()}\" is: {player1.GetLife()}");
+                    Console.WriteLine($"Current life for \"{player2.GetName()}\" is: {player2.GetLife()}" + Environment.NewLine);
                 }
 
                 Console.Write("Do you want to play another game?(y/n): ");
@@ -27,6 +29,7 @@ namespace RockPaperScissors
                 {
                     playAgain = false;
                 }
+                Console.Write(Environment.NewLine);
             } while (playAgain);
         }
 
@@ -50,7 +53,7 @@ namespace RockPaperScissors
                     return (player1, 10);
                 }
             }
-            else if (player2Move.Equals("scissors"))
+            else if (player1Move.Equals("scissors"))
             {
                 if (player2Move.Equals("paper"))
                 {
@@ -74,11 +77,18 @@ namespace RockPaperScissors
             }
         }
 
-        public static void ProcessResult((Player loser, int lifeLost) roundResult)
+        public static void ProcessResult(Player loser, int lifeLost)
         {
-            Console.WriteLine(roundResult.loser.GetName() + " lost the round, and lost "
-                             + roundResult.lifeLost + " life.");
-            roundResult.loser.SubtractLife(roundResult.lifeLost);
+            if (loser != null)
+            {
+                Console.WriteLine(loser.GetName() + " lost the round, and lost "
+                                + lifeLost + " life.");
+                loser.SubtractLife(lifeLost);
+            }
+            else
+            {
+                Console.WriteLine("This round was a tie.");
+            }
         }
     }
 }
