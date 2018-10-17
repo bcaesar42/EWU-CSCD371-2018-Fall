@@ -25,6 +25,14 @@ namespace LoginStuff.Tests
             person.LastName = "Nelson";
             Assert.AreEqual("Nelson", person.LastName);
         }
+
+        [TestMethod]
+        public void Deconstructor_Returns_FirstName_LastName()
+        {
+            var person = new Person("Inigo", "Montoya");
+
+            (string firstName, string lastName) = person;
+        }
     }
 
 

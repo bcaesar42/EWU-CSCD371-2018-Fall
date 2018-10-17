@@ -2,7 +2,19 @@
 {
     public class Person
     {
-        public string UserName;
+        private string _UserName;
+        public string UserName
+        {
+            get
+            {
+                return _UserName;
+            }
+            set
+            {
+                _UserName = value;
+            }
+        }
+
         private string Password;
 
         public string LastName { get; set; }
@@ -33,5 +45,10 @@
             Password = password;
         }
 
+        public void Deconstruct(out string firstName, out string lastName)
+        {
+            firstName = FirstName;
+            lastName = LastName;
+        }
     }
 }
