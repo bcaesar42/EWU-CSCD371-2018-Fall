@@ -5,9 +5,11 @@ namespace Assignment4
     public class UniversityCourse : Gathering
     {
         public UniversityCourse()
-            : base()
+            : base(null)
         {}
 
-
+        public UniversityCourse(string name)
+            : base(name)
+        {}
     }
 }
