@@ -8,9 +8,11 @@ namespace Assignment4.Tests
             : base(null)
         { }
 
-        public Event(string name)
+        public Event(string name, DateTime date)
             : base(name)
-        { }
+        {
+            Date = date;
+        }
 
         public DateTime Date { get; set; }
 

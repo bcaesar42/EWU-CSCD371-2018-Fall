@@ -10,10 +10,12 @@ namespace Assignment4
             CreditValue = 0;
         }
 
-        public UniversityCourse(string name, int credits)
+        public UniversityCourse(string name, int credits, DateTime start, DateTime end)
             : base(name)
         {
             CreditValue = credits;
+            StartDate = start;
+            EndDate = end;
         }
 
         private int _CreditValue;
