@@ -1,12 +1,14 @@
 ﻿using System;
 
-namespace Assignment4.Tests
+namespace Assignment4
 {
     public class Event : Gathering
     {
         public Event()
             : base(null)
-        { }
+        {
+            Date = new DateTime(2018, 1, 1);
+        }
 
         public Event(string name, DateTime date)
             : base(name)
@@ -21,6 +23,11 @@ namespace Assignment4.Tests
         {
             return "Event Name: " + GatheringName + Environment.NewLine +
                 "Event Date: " + Date;
+        }
+
+        public (string, DateTime) Deconstruct()
+        {
+            return (GatheringName, Date);
         }
     }
 }

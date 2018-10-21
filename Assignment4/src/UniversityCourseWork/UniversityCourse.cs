@@ -53,7 +53,7 @@ namespace Assignment4
             }
             set
             {
-                if (_EndDate.CompareTo(StartDate) < 0)
+                if (_EndDate.CompareTo(StartDate) > 0)
                 {
                     throw new ArgumentException("End date can't be before start date.");
                 }
