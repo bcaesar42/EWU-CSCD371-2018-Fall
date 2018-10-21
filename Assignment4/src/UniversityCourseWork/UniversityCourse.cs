@@ -39,5 +39,39 @@ namespace Assignment4
                 }
             }
         }
+
+        public DateTime StartDate { get; set; }
+
+        private DateTime _EndDate;
+        public DateTime EndDate
+        {
+            get
+            {
+                return _EndDate;
+            }
+            set
+            {
+                if (_EndDate.CompareTo(StartDate) < 0)
+                {
+                    throw new ArgumentException("End date can't be before start date.");
+                }
+                _EndDate = value;
+            }
+        }
+
+        public string CourseSchedule
+        {
+            get
+            {
+                return "From: " + StartDate + ", To: " + EndDate;
+            }
+        }
+
+        override
+        public string GetSummaryInformation()
+        {
+            return "Course Name: " + GatheringName + Environment.NewLine +
+                "Credits: " + CreditValue + Environment.NewLine + CourseSchedule;
+        }
     }
 }
