@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Assignment4
+namespace Assignment5
 {
     public class UniversityCourse : Gathering
     {
