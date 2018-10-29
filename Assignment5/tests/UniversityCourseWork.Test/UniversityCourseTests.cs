@@ -6,8 +6,20 @@ namespace Assignment4.Tests
     [TestClass]
     public class UniversityCourseTests
     {
+        [TestInitialize]
+        public void SetupMethod()
+        {
+            Gathering.ResetInstanceCount();
+        }
+
+        [TestCleanup]
+        public void CleanupTest()
+        {
+            
+        }
+
         [TestMethod]
-        public void InstantiationCount_4Gatherings_AtLeast4()
+        public void InstantiationCount_4Gatherings_4()
         {
             Gathering gathering = new UniversityCourse();
             gathering = new UniversityCourse("CS Course", 4,
@@ -15,7 +27,7 @@ namespace Assignment4.Tests
             gathering = new Event();
             gathering = new Event("Concert", new DateTime());
 
-            Assert.IsTrue(Gathering.InstantiationCount >= 4);
+            Assert.AreEqual(4, Gathering.InstantiationCount);
         }
 
         [TestMethod]
