@@ -2,7 +2,7 @@
 
 namespace Assignment5
 {
-    public class Event : Gathering
+    public class Event : Gathering, IEvent
     {
         public Event()
             : base(null)

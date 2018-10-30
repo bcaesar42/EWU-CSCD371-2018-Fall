@@ -15,8 +15,6 @@ namespace Assignment5
         public string GatheringName { get; }
         public string Location { get; set; }
 
-        public abstract string GetSummaryInformation();
-
         public static void ResetInstanceCount()
         {
             InstantiationCount = 0;
