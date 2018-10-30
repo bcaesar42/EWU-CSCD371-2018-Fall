@@ -59,13 +59,16 @@ namespace Assignment5
         {
             get
             {
-                return "From: " + StartDate + ", To: " + EndDate;
+                return $@"From: {StartDate}{Environment.NewLine}
+                    To: {EndDate}{ Environment.NewLine}
+                    Length: {(StartDate - EndDate).TotalDays} days";
             }
         }
 
         override public string GetSummaryInformation()
         {
             return "Course Name: " + GatheringName + Environment.NewLine +
+                "Location: " + Location + Environment.NewLine +
                 "Credits: " + CreditValue + Environment.NewLine + CourseSchedule;
         }
 
