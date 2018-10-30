@@ -4,9 +4,10 @@ namespace Assignment5
 {
     public abstract class Gathering
     {
-        public Gathering(string name)
+        public Gathering(string name, string location)
         {
             this.GatheringName = name;
+            this.Location = location;
             InstantiationCount++;
         }
 

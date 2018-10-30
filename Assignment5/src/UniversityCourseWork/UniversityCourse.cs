@@ -5,13 +5,13 @@ namespace Assignment5
     public class UniversityCourse : Gathering
     {
         public UniversityCourse()
-            : base(null)
+            : base(null, null)
         {
             CreditValue = 0;
         }
 
-        public UniversityCourse(string name, int credits, DateTime start, DateTime end)
-            : base(name)
+        public UniversityCourse(string name, string location, int credits, DateTime start, DateTime end)
+            : base(name, location)
         {
             CreditValue = credits;
             StartDate = start;
@@ -69,11 +69,53 @@ namespace Assignment5
             }
         }
 
-        override
-        public string GetSummaryInformation()
+        override public string GetSummaryInformation()
         {
             return "Course Name: " + GatheringName + Environment.NewLine +
                 "Credits: " + CreditValue + Environment.NewLine + CourseSchedule;
+        }
+
+        public static UniversityCourse MakeCourse()
+        {
+            MyConsole terminal = new MyConsole();
+            terminal.Write("Enter the course name: ");
+            string name = terminal.ReadLine();
+            terminal.Write("Enter the course location: ");
+            string location = terminal.ReadLine();
+            int credits = InitializeCreditValue();
+        }
+
+        private static int InitializeCreditValue()
+        {
+            MyConsole terminal = new MyConsole();
+            int credits = -1;
+            string userInput;
+
+            do
+            {
+                terminal.Write("How many credits is the course worth?: ");
+                userInput = terminal.ReadLine();
+
+                try
+                {
+                    credits = int.Parse(userInput);
+
+                    if (credits < 0 || credits > 15)
+                    {
+                        throw new ArgumentException("Invalid Input - Number not in valid range (0-15).");
+                    }
+                }
+                catch (FormatException)
+                {
+                    terminal.WriteLine("Invalid Input - Not a number.");
+                }
+                catch (ArgumentException e)
+                {
+                    terminal.WriteLine(e.Message);
+                }
+            } while (credits < 0 || credits > 15);
+
+            return credits;
         }
     }
 }

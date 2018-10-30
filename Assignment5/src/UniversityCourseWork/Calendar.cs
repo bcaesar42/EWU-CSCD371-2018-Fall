@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace Assignment5
 {
-    public class Scheduler
+    public class Calendar
     {
         public static void Main(string[] args)
         {
             List<Gathering> gatherings = new List<Gathering>();
-            int selection = -1;
+            int selection;
 
             do
             {
@@ -45,7 +45,7 @@ namespace Assignment5
 
                     if (selection < 0 || selection > 3)
                     {
-                        throw new ArgumentException("Invalid Input - Number not in valid range.");
+                        throw new ArgumentException("Invalid Input - Number not in valid range (0-3).");
                     }
                 }
                 catch (FormatException)
