@@ -2,15 +2,9 @@
 
 namespace Assignment5
 {
-    public class UniversityCourse : Gathering, IEvent
+    public class UniversityCourse : Gathering
     {
-        public UniversityCourse()
-            : base(null, null)
-        {
-            CreditValue = 0;
-        }
-
-        public UniversityCourse(string name, string location, int credits, DateTime start, DateTime end)
+        private UniversityCourse(string name, string location, int credits, DateTime start, DateTime end)
             : base(name, location)
         {
             CreditValue = credits;

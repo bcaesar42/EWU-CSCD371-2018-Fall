@@ -22,6 +22,7 @@ namespace Assignment5
         {
             MyConsole terminal = new MyConsole();
 
+            terminal.WriteLine("----------------------------------------------------");
             terminal.WriteLine("1.) Print current schedule.");
             terminal.WriteLine("2.) Add university course.");
             terminal.WriteLine("3.) Add one-time event.");
@@ -65,9 +66,11 @@ namespace Assignment5
         {
             if (selection == 1)
             {
+                MyConsole terminal = new MyConsole();
                 foreach (Gathering gathering in gatherings)
                 {
-                    gathering.GetSummaryInformation();
+                    terminal.WriteLine("-----------------------------------------");
+                    terminal.WriteLine(gathering.GetSummaryInformation());
                 }
             }
             else if (selection == 2)

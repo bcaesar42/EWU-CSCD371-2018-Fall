@@ -2,24 +2,17 @@
 
 namespace Assignment5
 {
-    public class Event : Gathering, IEvent
+    public class Event : Gathering
     {
-        public Event()
-            : base(null)
-        {
-            Date = new DateTime(2018, 1, 1);
-        }
+        public DateTime Date { get; set; }
 
-        public Event(string name, DateTime date)
-            : base(name)
+        public Event(string name, string location, DateTime date)
+            : base(name, location)
         {
             Date = date;
         }
 
-        public DateTime Date { get; set; }
-
-        override
-        public string GetSummaryInformation()
+        override public string GetSummaryInformation()
         {
             return "Event Name: " + GatheringName + Environment.NewLine +
                 "Event Date: " + Date;
@@ -28,6 +21,17 @@ namespace Assignment5
         public (string, DateTime) Deconstruct()
         {
             return (GatheringName, Date);
+        }
+
+        public static Event MakeEvent()
+        {
+            MyConsole terminal = new MyConsole();
+            terminal.Write("Enter the event name: ");
+            string name = terminal.ReadLine();
+            terminal.Write("Enter the event location: ");
+            string location = terminal.ReadLine();
+            DateTime date = Gathering.GetDateFromUser("Enter the date for the event: ");
+            return new Event(name, location, date);
         }
     }
 }
