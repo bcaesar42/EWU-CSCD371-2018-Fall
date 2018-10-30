@@ -21,5 +21,29 @@ namespace Assignment5
         {
             InstantiationCount = 0;
         }
+
+        public static DateTime GetDateFromUser(string prompt)
+        {
+            MyConsole terminal = new MyConsole();
+
+            while (true)
+            {
+                terminal.Write(prompt);
+                string userInput = terminal.ReadLine();
+                string[] dateComponents = userInput.Split("-");
+                try
+                {
+                    if (dateComponents.Length != 3)
+                    {
+                        throw new ArgumentException("Input not in yyyy-mm-dd format.");
+                    }
+                    return new DateTime(int.Parse(dateComponents[0]), int.Parse(dateComponents[1]), int.Parse(dateComponents[2]));
+                }
+                catch (Exception)
+                {
+                    terminal.WriteLine("Invalid Input - Please make sure that you are entering a valid date (yyyy-mm-dd).");
+                }
+            }
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace Assignment5
             {
                 PrintOptions();
                 selection = GetSelection();
-
+                ProcessSelection(gatherings, selection);
             } while (selection != 0);
         }
 

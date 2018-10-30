@@ -83,6 +83,9 @@ namespace Assignment5
             terminal.Write("Enter the course location: ");
             string location = terminal.ReadLine();
             int credits = InitializeCreditValue();
+            DateTime startDate = Gathering.GetDateFromUser("Enter the start-date for the course: ");
+            DateTime endDate = Gathering.GetDateFromUser("Enter the end-date for the course: ");
+            return new UniversityCourse(name, location, credits, startDate, endDate);
         }
 
         private static int InitializeCreditValue()
