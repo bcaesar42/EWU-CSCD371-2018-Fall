@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Assignment5
 {
@@ -6,12 +7,14 @@ namespace Assignment5
     {
         public static void Main(string[] args)
         {
+            List<Gathering> gatherings = new List<Gathering>();
             int selection = -1;
 
             do
             {
                 PrintOptions();
                 selection = GetSelection();
+
             } while (selection != 0);
         }
 
@@ -56,6 +59,25 @@ namespace Assignment5
             } while (selection < 0 || selection > 3);
 
             return selection;
+        }
+
+        private static void ProcessSelection(List<Gathering> gatherings, int selection)
+        {
+            if (selection == 1)
+            {
+                foreach (Gathering gathering in gatherings)
+                {
+                    gathering.GetSummaryInformation();
+                }
+            }
+            else if (selection == 2)
+            {
+                gatherings.Add(UniversityCourse.MakeCourse());
+            }
+            else if (selection == 3)
+            {
+                gatherings.Add(Event.MakeEvent());
+            }
         }
     }
 }
