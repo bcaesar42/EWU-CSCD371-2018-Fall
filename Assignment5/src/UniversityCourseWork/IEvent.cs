@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Assignment5
 {
-    interface IEvent
+    public interface IEvent
     {
        string GetSummaryInformation();
     }

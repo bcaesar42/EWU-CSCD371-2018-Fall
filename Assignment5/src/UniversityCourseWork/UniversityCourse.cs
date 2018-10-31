@@ -4,7 +4,7 @@ namespace Assignment5
 {
     public class UniversityCourse : Gathering
     {
-        private UniversityCourse(string name, string location, int credits, DateTime start, DateTime end)
+        public UniversityCourse(string name, string location, int credits, DateTime start, DateTime end)
             : base(name, location)
         {
             CreditValue = credits;
