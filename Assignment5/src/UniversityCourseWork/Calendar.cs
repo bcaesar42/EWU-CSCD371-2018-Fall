@@ -69,7 +69,7 @@ namespace Assignment5
                 MyConsole terminal = new MyConsole();
                 foreach (Gathering gathering in gatherings)
                 {
-                    terminal.WriteLine("-----------------------------------------");
+                    terminal.WriteLine("-----------------------");
                     terminal.WriteLine(gathering.GetSummaryInformation());
                 }
             }

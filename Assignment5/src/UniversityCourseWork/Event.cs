@@ -14,8 +14,9 @@ namespace Assignment5
 
         override public string GetSummaryInformation()
         {
-            return "Event Name: " + GatheringName + Environment.NewLine +
-                "Event Date: " + Date;
+            return $"Event Name: {GatheringName}{Environment.NewLine}" +
+                $"Location: {Location}{Environment.NewLine}" +
+                $"Event Date: {Date.ToString("MM-dd-yyyy")}";
         }
 
         public (string, DateTime) Deconstruct()

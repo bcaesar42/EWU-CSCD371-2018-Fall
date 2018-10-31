@@ -59,9 +59,9 @@ namespace Assignment5
         {
             get
             {
-                return $@"From: {StartDate}{Environment.NewLine}
-                    To: {EndDate}{ Environment.NewLine}
-                    Length: {(StartDate - EndDate).TotalDays} days";
+                return $"From: {StartDate.ToString("MM-dd-yyyy")}{Environment.NewLine}" +
+                    $"To: {EndDate.ToString("MM-dd-yyyy")}{ Environment.NewLine}" +
+                    $"Length: {(EndDate - StartDate).TotalDays} days";
             }
         }
 
