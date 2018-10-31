@@ -18,7 +18,7 @@ namespace Assignment5
             } while (selection != 0);
         }
 
-        private static void PrintOptions()
+        public static void PrintOptions()
         {
             MyConsole terminal = new MyConsole();
 
