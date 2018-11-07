@@ -2,6 +2,7 @@
 
 namespace Assignment6
 {
+    [Flags]
     public enum Quarters
     {
         Spring = 1,
