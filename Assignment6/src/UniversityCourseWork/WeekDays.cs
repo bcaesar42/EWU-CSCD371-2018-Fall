@@ -3,7 +3,7 @@
 namespace Assignment6
 {
     [Flags]
-    public enum WeekDays
+    public enum WeekDays : byte
     {
         Monday = 1,
         Tuesday = 2,

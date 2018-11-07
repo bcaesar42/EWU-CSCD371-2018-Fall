@@ -2,8 +2,8 @@
 {
     public struct Time
     {
-        public int hour { get; }
-        public int minute { get; }
-        public int second { get; }
+        public byte hour { get; }
+        public byte minute { get; }
+        public byte second { get; }
     }
 }

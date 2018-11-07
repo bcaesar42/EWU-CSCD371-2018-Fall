@@ -3,7 +3,7 @@
 namespace Assignment6
 {
     [Flags]
-    public enum Quarters
+    public enum Quarters : byte
     {
         Spring = 1,
         Summer = 2,
