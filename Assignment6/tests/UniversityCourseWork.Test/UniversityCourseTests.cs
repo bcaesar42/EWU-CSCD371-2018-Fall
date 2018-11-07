@@ -2,7 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 
-namespace Assignment5.Tests
+namespace Assignment6.Tests
 {
     [TestClass]
     public class UniversityCourseTests

@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-namespace Assignment5.Tests
+namespace Assignment6.Tests
 {
     [TestClass]
     public class EventTests

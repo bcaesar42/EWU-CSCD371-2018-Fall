@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Assignment5.Tests
+namespace Assignment6.Tests
 {
     [TestClass]
     public class CalendarTests
