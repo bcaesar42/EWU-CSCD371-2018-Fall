@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Assignment5
+namespace Assignment6
 {
     public interface IEvent
     {
