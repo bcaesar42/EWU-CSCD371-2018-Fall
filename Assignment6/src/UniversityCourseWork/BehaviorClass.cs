@@ -8,5 +8,11 @@ namespace Assignment6
     {
         public string name { get; set; }
         public int age { get; set; }
+
+        public BehaviorClass(string name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
     }
 }
