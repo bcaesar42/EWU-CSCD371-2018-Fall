@@ -9,7 +9,7 @@ namespace Assignment7.Tests
         [TestMethod]
         public void NotNullable_CreateNotNullableObjectAndSetItToNull_ObjectNotSetToNull()
         {
-            NotNullableReference<TestClass> myClass = new NotNullableReference<TestClass>();
+            NotNullable<TestClass> myClass = new NotNullable<TestClass>();
 
             myClass.Value = null;
 

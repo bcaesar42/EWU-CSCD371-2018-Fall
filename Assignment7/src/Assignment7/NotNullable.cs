@@ -15,21 +15,26 @@ namespace Assignment7
      * data rather than for data that is just default. Like maybe in a situation where a user on a website makes a new profile name,
      * the default value is different then the empty string value. (Billion Dollar Problem)
      *
-     * --Another problem with this is that even though the generic type is not nullable, the reference it is wrapped in (aka our class) is nullable.
+     * --Another problem with this is that even though the generic type (Value property) is not nullable, the reference it is wrapped in (aka our class) is nullable.
      * There is nothing we could find that prevents the user from writing the following code.
      *
      *   NotNullableReference<SomeClass> theClass = new NotNullableReference<SomeClass>;
      *   theClass = null;
      *
-     * --Because we need to ensure that the item will not be null, T is restricted to reference types that have a
-     * Default value Constructor, there is no way to fix this with-out losing the "not-null assurance" functionality.
+     * --Because we call the default value constructor of the generic type whenever Value would be set to null,
+     *   we have to constrain the generic to only be compatible with types that have a default construct for us to call.
+     *   This limits the number of types our class will be compatible with.
      *
      */
-    public class NotNullableReference<T>
+    public class NotNullable<T>
         where T : new()
     {
-        private T _Value;
+        public NotNullable()
+        {
+            Value = new T();
+        }
 
+        private T _Value;
         public T Value
         {
             get => _Value;
