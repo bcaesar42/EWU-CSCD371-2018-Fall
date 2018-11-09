@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Assignment7.Tests
 {
     [TestClass]
-    public class NotNullableReferenceTests
+    public class NotNullableTests
     {
         [TestMethod]
         public void NotNullable_CreateNotNullableObjectAndSetItToNull_ObjectNotSetToNull()
@@ -14,6 +14,20 @@ namespace Assignment7.Tests
             myClass.Value = null;
 
             Assert.IsNotNull(myClass.Value);
+        }
+
+        [TestMethod]
+        public void NotNullable_DefaultConstructorForNotNullable_ValueNotNull()
+        {
+            Assert.IsNotNull(new NotNullable<TestClass>());
+        }
+
+        [TestMethod]
+        public void NotNullable_SetAndThenGetValue_ReturnsBob()
+        {
+            NotNullable<TestClass> notNull = new NotNullable<TestClass>();
+            notNull.Value.Name = "Bob";
+            Assert.AreEqual("Bob", notNull.Value.Name);
         }
     }
 

@@ -21,7 +21,7 @@ namespace Assignment7
      *   NotNullableReference<SomeClass> theClass = new NotNullableReference<SomeClass>;
      *   theClass = null;
      *
-     * --Because we call the default value constructor of the generic type whenever Value would be set to null,
+     * --Because we call the default value constructor of the generic type whenever Value would otherwise be set to null,
      *   we have to constrain the generic to only be compatible with types that have a default construct for us to call.
      *   This limits the number of types our class will be compatible with.
      *
