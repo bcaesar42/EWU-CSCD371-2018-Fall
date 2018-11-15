@@ -5,40 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TimeTracker"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid x:Name="MyMainGrid" Margin="10" ColumnSpacing="5">
+        Title="MainWindow" Height="450" Width="800"
+        Topmost="True"
+        Background="Gray">
+    <Grid x:Name="MyMainGrid" Margin="10">
 
         <Grid.Resources>
-            <Style TargetType="{x:Type ColumnDefinition}">
-                <Setter Property=""
+            <Style x:Key="TasksBoxes" TargetType="ListBox">
+                <Setter Property="Grid.Row" Value="0"/>
+                <Setter Property="Background" Value="DarkSlateGray"/>
+                <Setter Property="BorderBrush" Value="Black"/>
             </Style>
         </Grid.Resources>
         
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width=".5*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width=".5*"/>
+            <ColumnDefinition Width="10*"/>
         </Grid.ColumnDefinitions>
         
         <Grid.RowDefinitions>
-            <RowDefinition Height="10*"/>
-            <RowDefinition/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
         <StackPanel x:Name="StartAndStopPanel" Grid.Column="0" Grid.Row="0" Background="Green">
             
         </StackPanel>
 
-        <ListBox x:Name="ActiveTasksBox" Grid.Column="1" Grid.Row="0" Background="Yellow">
+        <ListBox x:Name="ActiveTasksBox" Grid.Column="2" Style="{StaticResource TasksBoxes}">
             
         </ListBox>
 
-        <ListBox x:Name="FinishedTasksBox" Grid.Column="2" Grid.Row="0" Background="Red">
+        <ListBox x:Name="FinishedTasksBox" Grid.Column="4" Style="{StaticResource TasksBoxes}">
 
         </ListBox>
 
-        <Button x:Name="DeleteActiveTaskButton" Grid.Column="1" Grid.Row="1">
-            
-        </Button>
+        <Button x:Name="DeleteActiveTaskButton" Grid.Column="2" Grid.Row="1" Content="Delete"
+                VerticalAlignment="Center" HorizontalAlignment="Center"
+                Click="DeleteActiveTaskButton_OnClick"/>
+
+        <Button x:Name="DeleteFinishedTaskButton" Grid.Column="4" Grid.Row="1" Content="Delete"
+                VerticalAlignment="Center" HorizontalAlignment="Center"
+                Click="DeleteFinishedTaskButton_OnClick"/>
+        
     </Grid>
 </Window>

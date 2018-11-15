@@ -21,5 +21,15 @@ namespace TimeTracker
         {
             InitializeComponent();
         }
+
+        private void DeleteActiveTaskButton_OnClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DeleteFinishedTaskButton_OnClick(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
