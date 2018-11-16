@@ -99,13 +99,26 @@
             <ListBox x:Name="ActiveTasksBox"
                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                      Background="Tan"
-                     Grid.Row="1"/>
+                     Grid.Row="1">
+
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Name, StringFormat='Name: {0}  ---  '}"
+                                           HorizontalAlignment="Left" FontSize="10"/>
+                                <TextBlock Text="{Binding StartTime, StringFormat='Start Time: {0}'}"
+                                           HorizontalAlignment="Right" FontSize="10"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                
+            </ListBox>
 
             <Button x:Name="DeleteActiveTaskButton"
-                Content="Delete" FontSize="14"
-                VerticalAlignment="Center" HorizontalAlignment="Center"
-                Click="DeleteActiveTaskButton_OnClick"
-                Grid.Row="2"/>
+                    Content="Delete" FontSize="14"
+                    VerticalAlignment="Center" HorizontalAlignment="Center"
+                    Click="DeleteActiveTaskButton_OnClick"
+                    Grid.Row="2"/>
             
         </Grid>
 
@@ -126,13 +139,26 @@
             <ListBox x:Name="FinishedTasksBox"
                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                      Background="Tan"
-                     Grid.Row="1"/>
+                     Grid.Row="1">
+
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Name, StringFormat='Name: {0}  ---  '}"
+                                           HorizontalAlignment="Left" FontSize="10"/>
+                                <TextBlock Text="{Binding EllapsedTime, StringFormat='Ellapsed Time: {0}'}"
+                                           HorizontalAlignment="Right" FontSize="10"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+
+            </ListBox>
 
             <Button x:Name="FinishedActiveTaskButton"
-                Content="Delete" FontSize="14"
-                VerticalAlignment="Center" HorizontalAlignment="Center"
-                Click="DeleteFinishedTaskButton_OnClick"
-                Grid.Row="2"/>
+                    Content="Delete" FontSize="14"
+                    VerticalAlignment="Center" HorizontalAlignment="Center"
+                    Click="DeleteFinishedTaskButton_OnClick"
+                    Grid.Row="2"/>
 
         </Grid>
 
