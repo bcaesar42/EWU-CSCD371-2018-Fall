@@ -11,10 +11,13 @@
     <Grid x:Name="MyMainGrid" Margin="10">
 
         <Grid.Resources>
-            <Style x:Key="TasksBoxes" TargetType="ListBox">
+            <Style x:Key="MyColumns" TargetType="StackPanel">
                 <Setter Property="Grid.Row" Value="0"/>
                 <Setter Property="Background" Value="DarkSlateGray"/>
-                <Setter Property="BorderBrush" Value="Black"/>
+            </Style>
+
+            <Style x:Key="TasksBoxes" TargetType="ListBox">
+                <Setter Property="Background" Value="HotPink"/>
             </Style>
         </Grid.Resources>
         
@@ -35,17 +38,21 @@
             
         </StackPanel>
 
-        <ListBox x:Name="ActiveTasksBox" Grid.Column="2" Style="{StaticResource TasksBoxes}">
+        <StackPanel x:Name="MiddleColumn" Grid.Column="2" Style="{StaticResource MyColumns}">
+            <TextBlock Text="Active Tasks: " HorizontalAlignment="Center" TextDecorations="Underline"
+                       FontSize="18"/>
+
+            <ListBox x:Name="ActiveTasksBox" Style="{StaticResource TasksBoxes}"/>
+
+            <Button x:Name="DeleteActiveTaskButton" Grid.Column="2" Grid.Row="1" Content="Delete"
+                VerticalAlignment="Center" HorizontalAlignment="Center"
+                Click="DeleteActiveTaskButton_OnClick"/>
             
-        </ListBox>
+        </StackPanel>
 
         <ListBox x:Name="FinishedTasksBox" Grid.Column="4" Style="{StaticResource TasksBoxes}">
 
         </ListBox>
-
-        <Button x:Name="DeleteActiveTaskButton" Grid.Column="2" Grid.Row="1" Content="Delete"
-                VerticalAlignment="Center" HorizontalAlignment="Center"
-                Click="DeleteActiveTaskButton_OnClick"/>
 
         <Button x:Name="DeleteFinishedTaskButton" Grid.Column="4" Grid.Row="1" Content="Delete"
                 VerticalAlignment="Center" HorizontalAlignment="Center"
