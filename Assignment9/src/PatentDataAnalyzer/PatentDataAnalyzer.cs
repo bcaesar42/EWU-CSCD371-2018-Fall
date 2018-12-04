@@ -9,6 +9,11 @@ namespace Assignment9
     {
         public static List<string> InventorNames(string country)
         {
+            if (string.IsNullOrEmpty(country))
+            {
+                throw new ArgumentException("The country being specified cannot be null or empty.");
+            }
+
             IEnumerable<string> query = from Inventor in PatentData.Inventors
                                         where Inventor.Country.Equals(country)
                                         select Inventor.Name;

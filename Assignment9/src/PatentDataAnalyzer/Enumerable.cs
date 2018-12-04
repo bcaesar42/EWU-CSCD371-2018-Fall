@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace PatentDataAnalyzer
+namespace Assignment9
 {
     public static class Enumerable
     {
