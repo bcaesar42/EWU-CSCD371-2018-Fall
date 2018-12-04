@@ -12,6 +12,7 @@ namespace Assignment9
             IEnumerable<string> query = from Inventor in PatentData.Inventors
                                         where Inventor.Country.Equals(country)
                                         select Inventor.Name;
+
             return query.ToList<string>();
         }
 
@@ -21,6 +22,7 @@ namespace Assignment9
                                         let lastName = Inventor.Name.Split().Last<string>()
                                         orderby Inventor.Id descending
                                         select lastName;
+
             return query.ToList<string>();
         }
 
@@ -37,7 +39,24 @@ namespace Assignment9
             IEnumerable<string> resultQuery = from state in uniqueStatesQuery
                                               from country in uniqueCountriesQuery
                                               select $"{state}-{country}";
+
             return string.Join<string>(", ", resultQuery);
+        }
+
+        public static List<Inventor> GetInventorsWithMultiplePatents(int n)
+        {
+            IEnumerable<(string Name, int PatentCount)> patentCounts = from Inventor in PatentData.Inventors
+                                                                       from Patent in PatentData.Patents
+                                                                       where Patent.InventorIds.Contains<long>(Inventor.Id)
+                                                                       group Inventor by Inventor.Name into InventorsPatents
+                                                                       select (InventorsPatents.Key, InventorsPatents.Key.Count());
+
+            IEnumerable<Inventor> inventorsWithN = from Inventor in PatentData.Inventors
+                                                   from Counter in patentCounts
+                                                   where Inventor.Name == Counter.Name && Counter.PatentCount == n
+                                                   select Inventor;
+
+            return inventorsWithN.ToList<Inventor>();
         }
     }
 }
