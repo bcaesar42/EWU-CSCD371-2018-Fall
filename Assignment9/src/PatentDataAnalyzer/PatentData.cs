@@ -1,7 +1,6 @@
-﻿using System;
-
-namespace Assignment9
+﻿namespace Assignment9
 {
+    //Copied from: https://github.com/IntelliTect/EssentialCSharp/blob/v7.0/src/Chapter15/Listing15.10.FilteringWithSystem.Linq.Enumerable.Where.cs
     public static class PatentData
     {
         public static readonly Inventor[] Inventors = new Inventor[]
